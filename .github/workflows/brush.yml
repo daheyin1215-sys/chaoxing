@@ -26,4 +26,4 @@ jobs:
           USERNAME: ${{ secrets.USERNAME }}
           PASSWORD: ${{ secrets.PASSWORD }}
           COURSE_LIST: ${{ secrets.COURSE_LIST }}
-        run: python main.py -u "${USERNAME}" -p "${PASSWORD}" -l "${COURSE_LIST}"
+        run: echo -e "$USERNAME\n$PASSWORD" | python main.py -u "$USERNAME" -p "$PASSWORD" -l "$COURSE_LIST"
